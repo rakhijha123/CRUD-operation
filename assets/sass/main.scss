@@ -1,0 +1,136 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.header {
+  width: 100%;
+
+  background-color: #ee534f;
+
+  h1 {
+    padding: 10px;
+    font-weight: bold;
+    font-family: verdana;
+    font-size: 28px;
+    color: #fff;
+  }
+}
+
+.upper-btn-box {
+  width: 100%;
+  height: 100px;
+
+  display: flex;
+  padding: 25px;
+
+  .left-box {
+    width: 50%;
+    height: 100%;
+
+    button{
+        border: none;
+        outline: none;
+        background-color: #4286f5;
+        padding: 13px;
+        font-size: 22px;
+        font-family: verdana;
+        color: #fff;
+        margin: 0px 10px;
+    }
+  }
+
+  .right-box {
+    width: 50%;
+    height: 100%;
+    margin-left: 20rem;
+    
+
+
+    i{
+        font-size: 25px;
+        padding: 10px;
+        color: #4286f5;
+    }
+
+    input{
+        width: 70%;
+        padding: 13px;
+        outline: none;
+        border: none;
+        border-bottom: 3px solid #4286F5;
+        font-size: 16px;
+        font-family: verdana;
+        
+    }
+
+    button{
+        border: none;
+        outline: none;
+        background-color: #ee534f;
+        padding: 13px;
+        font-size: 22px;
+        font-family: verdana;
+        color: #fff;
+        margin: 0px 10px;
+    }
+  }
+}
+
+.table-box{
+    width: 100%;
+    padding: 30px;
+
+    table{
+        // width: 100%;
+        // border: 1px solid #ccc;
+    
+
+
+         position: absolute;
+        // z-index: 2;
+         left: 15%;
+         top: 30%;
+        // transform: translate(-50%, -50%);
+        width: 60%;
+        
+        border-collapse: collapse;
+        border-spacing: 0;
+        border-radius: 12px 12px 0 0;
+        // overflow: hidden;
+        box-shadow: 0 5px 12px rgba(32, 32, 32, 0.3);
+        background-color: #fafafa;
+        text-align: center;
+    
+tr{
+
+    th{
+        border-right: 1px solid #ccc;
+        padding: 30px 0px 0px;
+        font-family: verdana;
+        font-size: 20px;
+        border-bottom: 1px solid #ccc;
+    }
+
+    td{
+        border: 1px solid #ccc;
+        padding: 10px 0px 0px;
+        text-align: center;
+        font-family: verdana;
+        border-bottom: 1px solid #ccc;
+        font-size: 20px;
+
+
+        i{
+          font-size: 20px;
+          padding: 7px;
+          color: #ee534f;
+        }
+
+    }
+}
+    }
+}
+
+// @import "./userId.scss";
