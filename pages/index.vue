@@ -6,12 +6,11 @@
     <div class="upper-btn-box">
       <div class="left-box">
         <button><i class="ri-add-line"></i> &nbsp; Add Employe</button>
-        <button><i class="ri-eraser-fill"></i> &nbsp; Clear Filtering</button>
       </div>
       <div class="right-box">
         <i class="ri-search-line"></i>
-        <input type="text" id="empId" placeholder="Enter Employe id..." />
-        <button>Search</button>
+        <input v-model="searchInput" type="text" id="empId" placeholder="Enter Employee ID..." />
+    <button @click="searchEmployee">Search</button>
       </div>
     </div>
     <div class="table-box">
@@ -54,7 +53,7 @@ import { ref, onMounted } from "vue";
 import { useRouter } from "vue-router";
 import axios from "axios";
 
-const employees = ref([]);
+let employees = ref([]);
 const router = useRouter();
 
 const fetchData = async () => {
@@ -66,19 +65,6 @@ const fetchData = async () => {
   }
 };
 
-// const deleteEmploye = async (id) => {
-//   try {
-//     const response = await axios.get(`https://reqres.in/api/users/${id}`);
-//     if (response.status === 204) {
-//       await fetchData(); // Fetch updated data after deletion
-//     } else {
-//       console.error('Error deleting employee:', response.statusText);
-//     }
-//   } catch (error) {
-//     console.error('Error deleting employee:', error);
-//   }
-  
-// };
 const deleteEmploye = async (id) => {
   console.log("delete",id)
   try {
@@ -100,17 +86,21 @@ const handleUserIdClick = (data) => {
   return;
 };
 
-//   function handleView(employee) {
-//   console.log(employee);
-//   // Assuming you want to navigate to the viewDetail page with the employee's id
-//   router.push(`/viewDetail/${employee.id}`);
-// }
 
-// function handlEdit (data){
-//   console.log(data);
-//   router.push(`/editPage/${data}`);
-//   return;
-// }
+const searchInput = ref('');
+
+const searchEmployee = () => {
+  const searchTerm = searchInput.value;
+  if (!searchTerm) {
+    fetchData(); // If search term is empty, fetch all data
+    return;
+  }
+
+  // Filter employees based on the search term
+  employees.value = employees.value.filter((employee) =>
+  employee.id.toString().includes(searchTerm)
+);
+}
 
 const handlEdit = (data) => {
   console.log(data);

@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="header">
-      <h1>Employe</h1>
+      <h1 @click="goBackToHomePage">Employe</h1>
     </div>
     <div class="heading">
       <h1>UserDetails</h1>
@@ -37,7 +37,13 @@ import axios from "axios";
 import { useRouter } from "vue-router";
 const router = useRouter();
 
-const employees = ref([]);
+
+const goBackToHomePage = () => {
+  router.push("/");
+  return;
+};
+
+let employees = ref([]);
 // let id = ref("");
 
 let id = router.currentRoute.value.params.id;
