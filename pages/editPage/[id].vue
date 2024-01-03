@@ -8,7 +8,7 @@
 </div>
 <div class="container">
   <div class="left-box">
-        <img :src="employees.avatar" alt="Avatar" />
+    <img :src="employees.data.avatar" alt="Avatar" />
       </div>
 <div class="right-box">
  <h5>First-Name: <span><input v-model="employees.data.first_name"/></span></h5>
