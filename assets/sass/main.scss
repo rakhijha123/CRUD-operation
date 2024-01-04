@@ -38,6 +38,8 @@ cursor: pointer;
         font-family: verdana;
         color: #fff;
         margin: 0px 10px;
+        box-shadow: 0 5px 12px rgba(32, 32, 32, 0.3);
+        border-radius: 10px;
     }
   }
 
@@ -75,6 +77,7 @@ cursor: pointer;
         color: #fff;
         margin: 0px 10px;
         cursor: pointer;
+        box-shadow: 0 5px 12px rgba(32, 32, 32, 0.3);
     }
   }
 }

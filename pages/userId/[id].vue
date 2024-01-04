@@ -18,7 +18,7 @@
       </div>
       <div class="right-box">
         <h5>
-          First-Name: xyz<span>{{ employees.first_name }}</span>
+          First-Name: <span>{{ employees.first_name }}</span>
         </h5>
         <h5>
           Last-Name: <span>{{ employees.last_name }}</span>
